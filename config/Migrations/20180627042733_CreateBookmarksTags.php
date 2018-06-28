@@ -12,17 +12,20 @@ class CreateBookmarksTags extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('bookmarks_tags');
+        $table = $this->table('bookmarks_tags', [
+            'id' => false,
+            'primary_key' => ['bookmark_id', 'tag_id']
+        ]);
         $table->addColumn('bookmark_id', 'integer', [
             'limit' => 11,
-            'null'  => false,
-        ])->addPrimaryKey('bookmark_id')
-          ->addIndex(['bookmark_id'])->addForeignKey('bookmark_id ', 'bookmarks', 'id');
+            'null'  => false
+        ])->addIndex(['bookmark_id'])
+          ->addForeignKey('bookmark_id', 'bookmarks', 'id');
         $table->addColumn('tag_id', 'integer', [
             'limit' => 11,
-            'null'  => false,
-        ])->addPrimaryKey('tag_id')
-          ->addIndex(['tag_id'])->addForeignKey('tag_id', 'tags', 'id');
+            'null'  => false
+        ])->addIndex(['tag_id'])
+          ->addForeignKey('tag_id', 'tags', 'id');
         $table->create();
     }
 }
