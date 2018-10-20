@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/manage.css": "/css/manage.css",
+    "/js/manage.js": "/js/manage.js",
+    "/js/modernizr.min.js": "/js/modernizr.min.js",
+    "/css/plugins.css": "/css/plugins.css",
+    "/js/jsCore.js": "/js/jsCore.js",
+    "/js/globalScript.js": "/js/globalScript.js",
+    "/js/pluginsHome.js": "/js/pluginsHome.js",
+    "/js/jsPageHome.js": "/js/jsPageHome.js"
+}
