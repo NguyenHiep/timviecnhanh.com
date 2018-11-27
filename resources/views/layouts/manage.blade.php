@@ -11,10 +11,11 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <!-- App title -->
-  <title>{{ config('app.name', 'Laravel Uplon - Responsive Admin Dashboard Template') }}</title>
+  <title>@yield('title', config('app.name'))</title>
   @stack('styles')
   <!-- Styles -->
   <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Styles -->
   <link href="{{ asset('css/manage.css') }}" rel="stylesheet">
 
@@ -29,7 +30,6 @@
 
 </head>
 <body class="fixed-left">
-<div id="app"></div>
 <!-- Begin page -->
 <div id="wrapper">
 

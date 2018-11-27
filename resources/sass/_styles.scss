@@ -1,0 +1,30 @@
+.btn-secondary {
+  color: #292b2c;
+}
+.edit-row .zmdi-edit,
+.delete-row .zmdi-delete {
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+  font-size: 24px;
+  border: 1px solid $gray-lighter;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 12px;
+  color: rgba(43, 61, 81, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+}
+.edit-row .zmdi-edit:hover,
+.delete-row .zmdi-delete:hover{
+  color: $white;
+  background-color: $primary;
+}
+.checkbox-list{
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  position: relative;
+  top: 7px;
+}

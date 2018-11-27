@@ -12,6 +12,9 @@ const mix = require('laravel-mix');
  */
 /** Global config */
 mix.copyDirectory('resources/images', 'public/images');
+mix.copyDirectory('resources/pages', 'public/pages');
+mix.copyDirectory('resources/plugins', 'public/plugins');
+mix.copyDirectory('resources/sass/bootstrap.min.css', 'public/css');
 mix.js('resources/js/app.js', 'public/js')
 .js('resources/js/manage.js', 'public/js')
 .sass('resources/sass/app.scss', 'public/css')
@@ -29,8 +32,10 @@ mix.scripts([
 ], 'public/js/jsCore.js');
 
 mix.scripts([
-  'resources/js/manage/jquery-migrate-3.0.0.js',
+  'resources/js/manage/jquery.min.js',
+  /*'resources/js/manage/jquery-migrate-3.0.0.js',*/
   'resources/js/manage/tether.min.js',
+  'resources/js/manage/bootstrap.min.js',
   'resources/js/manage/detect.js',
   'resources/js/manage/fastclick.js',
   'resources/js/manage/jquery.blockUI.js',
@@ -52,6 +57,19 @@ mix.scripts([
   'resources/plugins/counterup/jquery.counterup.min.js'
 ], 'public/js/pluginsHome.js');
 
+mix.scripts([
+  'resources/pages/jquery.dashboard.js'
+], 'public/js/jsPageHome.js');
+
+/** Style page task*/
+mix.styles([
+  'resources/plugins/bootstrap-sweetalert/sweet-alert.css',
+  'resources/plugins/RWD-Table-Patterns/css/rwd-table.min.css'
+], 'public/css/pluginsList.css');
+mix.scripts([
+  'resources/plugins/bootstrap-sweetalert/sweet-alert.min.js',
+  'resources/plugins/RWD-Table-Patterns/js/rwd-table.min.js',
+], 'public/js/pluginsList.js');
 mix.scripts([
   'resources/pages/jquery.dashboard.js'
 ], 'public/js/jsPageHome.js');

@@ -13,6 +13,8 @@
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
+        "eslint": "^5.8.0",
+        "eslint-config-airbnb": "^17.1.0",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.5",
@@ -20,6 +22,10 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "jquery-migrate": "^3.0.1"
+        "vue-fullcalendar": "^1.0.9",
+        "vue-router": "^3.0.1",
+        "vue-sweetalert2": "^1.5.6",
+        "vuelidate": "^0.7.4",
+        "vuex": "^3.0.1"
     }
 }

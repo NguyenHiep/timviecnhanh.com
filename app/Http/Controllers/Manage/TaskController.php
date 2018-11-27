@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Manage;
 
+use App\Model\Task;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Exports\TaskExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TaskController extends BaseController
 {
@@ -61,5 +65,10 @@ class TaskController extends BaseController
     public function index_calendar()
     {
         return view('manage.tasks.index_calendar');
+    }
+
+    public function export()
+    {
+        return Excel::download(new TaskExport, 'task.csv', \Maatwebsite\Excel\Excel::TSV);
     }
 }
